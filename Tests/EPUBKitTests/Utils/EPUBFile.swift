@@ -14,6 +14,7 @@ enum EPUBFile {
     case theGeographyofBliss
     case theMetamorphosis
     case theProblemsofPhilosophy
+    case winnie
     // broken
     case alicesAdventuresinWonderlandBrokenArchive
     case theGeographyofBlissBrokenContainer
@@ -30,6 +31,8 @@ enum EPUBFile {
             return "The_Metamorphosis"
         case .theProblemsofPhilosophy:
             return "The_Problems_of_Philosophy"
+        case .winnie:
+            return "Winnie-the-Pooh"
         case .alicesAdventuresinWonderlandBrokenArchive:
             return "broken_archive_alice"
         case .theGeographyofBlissBrokenContainer:
@@ -46,7 +49,8 @@ enum EPUBFile {
         case .alicesAdventuresinWonderland,
              .theGeographyofBliss,
              .theMetamorphosis,
-             .theProblemsofPhilosophy:
+             .theProblemsofPhilosophy,
+             .winnie:
             return false
         case .alicesAdventuresinWonderlandBrokenArchive,
              .theGeographyofBlissBrokenContainer,

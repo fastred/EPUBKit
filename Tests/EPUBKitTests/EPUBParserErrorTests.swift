@@ -50,23 +50,16 @@ final class EPUBParserErrorTests: XCTestCase {
         }
     }
 
-    func testErrorTocWithBrokenMetamorphosis() {
+    func testNoTocWithBrokenMetamorphosis() {
         let url = library.path(for: .theMetamorphosisBrokenToc)
-        let parser = EPUBParser()
-        XCTAssertThrowsError(try parser.parse(documentAt: url), "") { error in
-            guard let error = error as? EPUBParserError else {
-                XCTFail("Error should be of type `EPUBParserError`")
-                return
-            }
-            switch error {
-            case .tableOfContentsMissing:
-                XCTAssertNotNil(error.errorDescription)
-                XCTAssertNotNil(error.failureReason)
-                XCTAssertNotNil(error.recoverySuggestion)
-            default:
-                XCTFail("Wrong error thrown: \(error)")
-            }
+        guard let document = EPUBDocument(url: url) else {
+            XCTFail("Document should be parsed correctly.")
+            return
         }
+        XCTAssertEqual(document.title, "Metamorphosis")
+        XCTAssertEqual(document.author, "Franz Kafka")
+        XCTAssertEqual(document.publisher, "PressBooks.com")
+        XCTAssertNotNil(document.cover)
     }
 
     func testErrorContentWithBrokenPhilosophy() {

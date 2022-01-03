@@ -35,7 +35,7 @@ public final class EPUBParser: EPUBParserProtocol {
         var metadata: EPUBMetadata
         var manifest: EPUBManifest
         var spine: EPUBSpine
-        var tableOfContents: EPUBTableOfContents
+        var tableOfContents: EPUBTableOfContents?
         delegate?.parser(self, didBeginParsingDocumentAt: path)
         do {
             var isDirectory: ObjCBool = false
@@ -57,13 +57,14 @@ public final class EPUBParser: EPUBParserProtocol {
             manifest = getManifest(from: contentService.manifest)
             delegate?.parser(self, didFinishParsing: manifest)
 
-            guard let toc = spine.toc, let fileName = manifest.items[toc]?.path else {
-                throw EPUBParserError.tableOfContentsMissing
-            }
-            let tableOfContentsElement = try contentService.tableOfContents(fileName)
+            if let toc = spine.toc, let fileName = manifest.items[toc]?.path {
+                let tableOfContentsElement = try contentService.tableOfContents(fileName)
 
-            tableOfContents = getTableOfContents(from: tableOfContentsElement)
-            delegate?.parser(self, didFinishParsing: tableOfContents)
+                tableOfContents = getTableOfContents(from: tableOfContentsElement)
+                if let tableOfContents = tableOfContents {
+                    delegate?.parser(self, didFinishParsing: tableOfContents)
+                }
+            }
         } catch let error {
             delegate?.parser(self, didFailParsingDocumentAt: path, with: error)
             throw error
