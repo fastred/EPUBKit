@@ -70,4 +70,15 @@ final class EPUBDocumentTests: XCTestCase {
         XCTAssertEqual(document.author, "A. A. Milne")
         XCTAssertNotNil(document.cover)
     }
+
+    func testEPUBDocumentSimpleInitialiserWithSatsuma() {
+        let url = library.path(for: .theSatsumaComplex)
+        guard let document = EPUBDocument(url: url) else {
+            XCTFail("Document should be parsed correctly.")
+            return
+        }
+        XCTAssertEqual(document.title, "The Satsuma Complex")
+        XCTAssertEqual(document.author, "Bob Mortimer")
+        XCTAssertNotNil(document.cover)
+    }
 }
