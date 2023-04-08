@@ -32,7 +32,9 @@ class EPUBContentServiceImplementation: EPUBContentService {
         let path = try Self.getContentPath(from: url)
         contentDirectory = path.deletingLastPathComponent()
         let data = try Data(contentsOf: path)
-        content = try AEXMLDocument(xml: data)
+        var options = AEXMLOptions()
+        options.parserSettings.shouldProcessNamespaces = true
+        content = try AEXMLDocument(xml: data, options: options)
     }
 
     func tableOfContents(_ fileName: String) throws -> AEXMLElement {

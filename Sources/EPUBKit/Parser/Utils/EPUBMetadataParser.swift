@@ -18,28 +18,28 @@ class EPUBMetadataParserImplementation: EPUBMetadataParser {
     func parse(_ xmlElement: AEXMLElement) -> EPUBMetadata {
         var metadata = EPUBMetadata()
         metadata.contributor = EPUBCreator(
-            name: xmlElement["dc:contributor"].value,
-            role: xmlElement["dc:contributor"].attributes["opf:role"],
-            fileAs: xmlElement["dc:contributor"].attributes["opf:file-as"]
+            name: xmlElement["contributor"].value,
+            role: xmlElement["contributor"].attributes["role"],
+            fileAs: xmlElement["contributor"].attributes["file-as"]
         )
-        metadata.coverage = xmlElement["dc:coverage"].value
+        metadata.coverage = xmlElement["coverage"].value
         metadata.creator = EPUBCreator(
-            name: xmlElement["dc:creator"].value,
-            role: xmlElement["dc:creator"].attributes["opf:role"],
-            fileAs: xmlElement["dc:creator"].attributes["opf:file-as"]
+            name: xmlElement["creator"].value,
+            role: xmlElement["creator"].attributes["role"],
+            fileAs: xmlElement["creator"].attributes["file-as"]
         )
-        metadata.date = xmlElement["dc:date"].value
-        metadata.description = xmlElement["dc:description"].value
-        metadata.format = xmlElement["dc:format"].value
-        metadata.identifier = xmlElement["dc:identifier"].value
-        metadata.language = xmlElement["dc:language"].value
-        metadata.publisher = xmlElement["dc:publisher"].value
-        metadata.relation = xmlElement["dc:relation"].value
-        metadata.rights = xmlElement["dc:rights"].value
-        metadata.source = xmlElement["dc:source"].value
-        metadata.subject = xmlElement["dc:subject"].value
-        metadata.title = xmlElement["dc:title"].value
-        metadata.type = xmlElement["dc:type"].value
+        metadata.date = xmlElement["date"].value
+        metadata.description = xmlElement["description"].value
+        metadata.format = xmlElement["format"].value
+        metadata.identifier = xmlElement["identifier"].value
+        metadata.language = xmlElement["language"].value
+        metadata.publisher = xmlElement["publisher"].value
+        metadata.relation = xmlElement["relation"].value
+        metadata.rights = xmlElement["rights"].value
+        metadata.source = xmlElement["source"].value
+        metadata.subject = xmlElement["subject"].value
+        metadata.title = xmlElement["title"].value
+        metadata.type = xmlElement["type"].value
         xmlElement["meta"].all?
             .filter { $0.attributes["name"] == "cover" }
             .forEach { metadata.coverId = $0.attributes["content"] }
