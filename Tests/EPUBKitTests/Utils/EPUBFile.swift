@@ -16,6 +16,7 @@ enum EPUBFile {
     case theProblemsofPhilosophy
     case winnie
     case theSatsumaComplex
+    case leLivreVert
     // broken
     case alicesAdventuresinWonderlandBrokenArchive
     case theGeographyofBlissBrokenContainer
@@ -36,6 +37,8 @@ enum EPUBFile {
             return "Winnie-the-Pooh"
         case .theSatsumaComplex:
             return "_OceanofPDF.com_The_Satsuma_Complex_-_Bob_Mortimer 2"
+        case .leLivreVert:
+            return "Le Livre Vert"
         case .alicesAdventuresinWonderlandBrokenArchive:
             return "broken_archive_alice"
         case .theGeographyofBlissBrokenContainer:
@@ -54,7 +57,8 @@ enum EPUBFile {
              .theMetamorphosis,
              .theProblemsofPhilosophy,
              .winnie,
-             .theSatsumaComplex:
+             .theSatsumaComplex,
+             .leLivreVert:
             return false
         case .alicesAdventuresinWonderlandBrokenArchive,
              .theGeographyofBlissBrokenContainer,

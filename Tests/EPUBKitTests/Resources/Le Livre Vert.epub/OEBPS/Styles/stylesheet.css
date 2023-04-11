@@ -1,0 +1,150 @@
+.Auteur {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 18pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 18pt;
+    text-align: center
+    }
+.ConfrencesTitre {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 9pt;
+    font-style: italic;
+    margin-bottom: 0.0001pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: center
+    }
+.Confrencestexte {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 10pt;
+    font-style: italic;
+    margin-bottom: 24pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: center;
+    text-indent: 0
+    }
+.Texte {
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 11pt;
+    margin-bottom: 2pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2pt;
+    text-align: justify;
+    text-indent: 17pt
+    }
+.TexteIt {
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 10pt;
+    font-style: italic;
+    margin-bottom: 12pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12pt;
+    page-break-after: avoid;
+    text-align: justify;
+    text-indent: 17pt
+    }
+.TexteItalique {
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 10pt;
+    font-style: italic;
+    margin-bottom: 2pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2pt;
+    text-align: justify;
+    text-indent: 17pt
+    }
+.Titrelivre {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 6pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 6pt;
+    text-align: center
+    }
+.WordSection {
+    display: block;
+    page: WordSection1
+    }
+.calibre {
+    display: block;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: justify
+    }
+.calibre1 {
+    height: 75px;
+    width: 75px
+    }
+.calibre2 {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 12pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30pt;
+    page-break-after: avoid;
+    text-align: center
+    }
+.calibre3 {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 0.0001pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    page-break-after: avoid;
+    text-align: center
+    }
+.calibre4 {
+    display: block
+    }
+.calibre5 {
+    color: black;
+    display: block;
+    font-family: "Georgia", "serif";
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 0.0001pt;
+    margin-left: 17pt;
+    margin-right: 0;
+    margin-top: 16pt
+    }
+.calibre6 {
+    font-style: italic
+    }
+.calibre7 {
+    font-weight: bold
+    }

@@ -81,4 +81,15 @@ final class EPUBDocumentTests: XCTestCase {
         XCTAssertEqual(document.author, "Bob Mortimer")
         XCTAssertNotNil(document.cover)
     }
+
+    func testEPUBDocumentSimpleInitialiserWithLeLivreVert() {
+        let url = library.path(for: .leLivreVert)
+        guard let document = EPUBDocument(url: url) else {
+            XCTFail("Document should be parsed correctly.")
+            return
+        }
+        XCTAssertEqual(document.title, "Le Livre Vert")
+        XCTAssertEqual(document.author, "Kadhafi Mouammar")
+        XCTAssertNotNil(document.cover)
+    }
 }

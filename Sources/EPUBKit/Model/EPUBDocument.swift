@@ -40,6 +40,7 @@ public struct EPUBDocument {
         self = document
     }
 
+
 }
 
 extension EPUBDocument {

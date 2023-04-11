@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+  <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <meta content="Livre Vert, Le" name="calibre:title_sort" />
+    <dc:description>&lt;p&gt;Le LIVRE VERT est un livre publié pour la première fois en 1975, où le colonel Mouammar Kadhafi, principal dirigeant politique de la Libye, expose sa vision de la démocratie et de la politique. Il a été complété par une deuxième partie en 1977, puis une troisième en 1981. Il constitue le fondement de la réflexion qui aboutira à la création de la « Grande Jamahiriya arabe libyenne populaire et socialiste », instaurée en 1977 par Moummar El-Kadhafi, qui prendra lui-même, deux ans plus tard, le titre de Guide de la Révolution Libyenne. Dans son ouvrage, le Président Lybien Moammar El Kadhafi nous livre ses refléxions sur trois sujets d'actualité : la Solution au Problème de la Démocratie, la Solution du Problème Economique et les Fondements Sociaux de la Troisième Théorie Universelle. Dans la première partie de son livre, Mouammar Kadhafi rejette la démocratie parlementaire, le régime à parti unique et préconise la mise en place de la Jamahiriyya (l'État des masses) une alternative inspirée de la démocratie directe. Celle-ci est basée sur les comités populaires. Kadhafi est largement accusé de s'appuyer sur ces comités pour mener une politique autocratique et répressive.&lt;/p&gt;</dc:description>
+    <dc:language>fr</dc:language>
+    <dc:creator opf:file-as="Mouammar, Kadhafi" opf:role="aut">Kadhafi Mouammar</dc:creator>
+    <meta content="2013-06-27T15:44:10+00:00" name="calibre:timestamp" />
+    <dc:title>Le Livre Vert</dc:title>
+    <meta name="cover" content="cover" />
+    <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.9.17) [http://calibre-ebook.com]</dc:contributor>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">222141bf-0e83-4acf-9463-30e2672effe0</dc:identifier>
+    <dc:identifier opf:scheme="calibre">222141bf-0e83-4acf-9463-30e2672effe0</dc:identifier>
+    <meta content="0.7.4" name="Sigil version" />
+    <dc:date opf:event="modification">2014-01-28</dc:date>
+  </metadata>
+  <manifest>
+    <item href="Images/cover.jpeg" id="cover" media-type="image/jpeg" />
+    <item href="Text/Kadhafi%20Mouammar%20-%20Le%20Livre%20Vert_split_000.htm" id="html4" media-type="application/xhtml+xml" />
+    <item href="Text/Kadhafi%20Mouammar%20-%20Le%20Livre%20Vert_split_001.htm" id="html3" media-type="application/xhtml+xml" />
+    <item href="Text/Kadhafi%20Mouammar%20-%20Le%20Livre%20Vert_split_002.htm" id="html2" media-type="application/xhtml+xml" />
+    <item href="Text/Kadhafi%20Mouammar%20-%20Le%20Livre%20Vert_split_003.htm" id="html1" media-type="application/xhtml+xml" />
+    <item href="Images/image001.gif" id="added" media-type="image/gif" />
+    <item href="Styles/page_styles.css" id="page_css" media-type="text/css" />
+    <item href="Styles/stylesheet.css" id="css" media-type="text/css" />
+    <item href="Text/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml" />
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage" />
+    <itemref idref="html4" />
+    <itemref idref="html3" />
+    <itemref idref="html2" />
+    <itemref idref="html1" />
+  </spine>
+  <guide>
+    <reference href="Text/titlepage.xhtml" title="Cover" type="cover" />
+  </guide>
+</package>
