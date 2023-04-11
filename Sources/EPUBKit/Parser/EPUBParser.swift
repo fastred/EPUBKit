@@ -57,8 +57,9 @@ public final class EPUBParser: EPUBParserProtocol {
             manifest = getManifest(from: contentService.manifest)
             delegate?.parser(self, didFinishParsing: manifest)
 
-            if let toc = spine.toc, let fileName = manifest.items[toc]?.path {
-                let tableOfContentsElement = try contentService.tableOfContents(fileName)
+            if let toc = spine.toc,
+                let fileName = manifest.items[toc]?.path,
+               let tableOfContentsElement = try? contentService.tableOfContents(fileName){
 
                 tableOfContents = getTableOfContents(from: tableOfContentsElement)
                 if let tableOfContents = tableOfContents {
